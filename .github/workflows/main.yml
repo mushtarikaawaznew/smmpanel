@@ -1,0 +1,18 @@
+# RDP Client Integration
+
+This project demonstrates how to integrate an RDP client into a web application using Apache Guacamole.
+
+## Setup
+
+1. **Install Guacamole**: Follow the [Guacamole installation guide](https://guacamole.apache.org/doc/gug/).
+
+2. **Run Your Web App**: Serve the `index.html` file using a web server.
+
+3. **Access the RDP Client**: Open `index.html` in your browser and the RDP client should be accessible via the iframe.
+
+## Docker (optional)
+
+Run the following command to start Guacamole, guacd, and MySQL using Docker:
+
+```bash
+docker-compose up
