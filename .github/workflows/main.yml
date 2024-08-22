@@ -1,18 +1,47 @@
-# RDP Client Integration
+# Remote Desktop Setup
 
-This project demonstrates how to integrate an RDP client into a web application using Apache Guacamole.
+This repository contains a Docker setup for Apache Guacamole, a clientless remote desktop gateway. This setup allows you to access RDP sessions via a web interface.
 
-## Setup
+## Setup Instructions
 
-1. **Install Guacamole**: Follow the [Guacamole installation guide](https://guacamole.apache.org/doc/gug/).
+1. **Clone the Repository**
 
-2. **Run Your Web App**: Serve the `index.html` file using a web server.
+    ```bash
+    git clone https://github.com/<your-username>/remote-desktop-setup.git
+    cd remote-desktop-setup
+    ```
 
-3. **Access the RDP Client**: Open `index.html` in your browser and the RDP client should be accessible via the iframe.
+2. **Run the Setup Script**
 
-## Docker (optional)
+    Ensure Docker and Docker Compose are installed on your machine. Then, run:
 
-Run the following command to start Guacamole, guacd, and MySQL using Docker:
+    ```bash
+    ./setup.sh
+    ```
 
-```bash
-docker-compose up
+3. **Access Guacamole**
+
+    Open your web browser and navigate to:
+
+    ```
+    http://localhost:8080/guacamole
+    ```
+
+4. **Login**
+
+    Default login credentials are:
+
+    - **Username:** `guacadmin`
+    - **Password:** `guacadmin`
+
+    Make sure to change these credentials and configure your RDP connections through the Guacamole web interface.
+
+## Notes
+
+- **Security:** Ensure to secure your Guacamole instance by following best security practices.
+- **Customization:** Modify `docker-compose.yml` and `setup.sh` as needed to fit your requirements.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
